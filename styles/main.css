@@ -1,0 +1,115 @@
+/*------------------------------------------------------------------------------------
+Theme Name: Name of the theme
+Author: Author name
+URL: contact url
+version: 1.0.0
+------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------
+CSS table of content
+
+    01. Settings style
+    02. Helper style
+    03. Section style
+    04. Components style
+    05. Utilities style
+
+------------------------------------------------------------------------------------*/
+/*--------------------------------
+01. Settings style
+--------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a,
+.btn,
+button {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover,
+.btn:hover,
+button:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus,
+.btn:focus,
+button:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  border: none;
+}
+
+a,
+button,
+img,
+input,
+span,
+::before,
+::after {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+*:focus {
+  outline: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  color: #32325d;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #32325d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/*--------------------------------
+02. Helper style
+--------------------------------*/
+/*--------------------------------
+03. Section style
+--------------------------------*/
+/*--------------------------------
+04. Components style
+--------------------------------*/
+/*--------------------------------
+05. Utilities style
+--------------------------------*/
+/*# sourceMappingURL=main.css.map */
