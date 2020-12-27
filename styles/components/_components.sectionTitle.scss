@@ -1,0 +1,10 @@
+.section__title{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+    color: $black;
+    margin-bottom: 20px;
+    &.--center{
+        text-align: center;
+    }
+}

@@ -8,8 +8,8 @@ version: 1.0.0
 CSS table of content
 
     01. Settings style
-    02. Helper style
-    03. Section style
+    02. Base style
+    03. Sections style
     04. Components style
     05. Utilities style
 
@@ -18,11 +18,50 @@ CSS table of content
 01. Settings style
 --------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/*--------------------------------
+02. Base style
+--------------------------------*/
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #6c5ce7;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+::-moz-selection {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+::selection {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #2980b9;
+  color: #fff;
 }
 
 a,
@@ -79,36 +118,189 @@ img {
   max-width: 100%;
 }
 
-body {
-  color: #32325d;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-style: normal;
+/*--------------------------------
+03. Sections style
+--------------------------------*/
+#slider-area {
+  padding: 100px 0 50px 0;
+}
+
+.owl-carousel .owl-dots {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  margin: 0 5px;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #fd79a8;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  background-color: #6c5ce7 !important;
+}
+
+#footer-bottom {
+  padding: 20px 0;
+  background-color: #fd79a8;
+}
+
+.copyright-text {
+  text-align: center;
+}
+
+.copyright-text h2 {
+  font-size: 16px;
   font-weight: 400;
+  color: #fff;
+  line-height: 28px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #32325d;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
-  margin: 0;
-}
-
-/*--------------------------------
-02. Helper style
---------------------------------*/
-/*--------------------------------
-03. Section style
---------------------------------*/
 /*--------------------------------
 04. Components style
 --------------------------------*/
+.navbar-brand {
+  margin-top: 8px;
+}
+
+.navbar-brand img {
+  width: 135px;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-toggler i {
+  font-size: 20px;
+  color: #2980b9;
+}
+
+.nav-link {
+  padding: 0 !important;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu > li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.main-menu li a {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 400;
+  color: #1d316c;
+  line-height: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+
+.main-menu li a::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #6c5ce7;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-menu li a:hover {
+  color: #6c5ce7;
+}
+
+.main-menu li a:hover::before {
+  width: 20px;
+  opacity: 1;
+}
+
+.main-menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-menu .submenu {
+  position: absolute;
+  top: 150%;
+  left: -20px;
+  width: 200px;
+  padding: 15px 0;
+  border: 1px solid whitesmoke;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(137, 139, 142, 0.15) 0px 30px 70px 0px;
+          box-shadow: rgba(137, 139, 142, 0.15) 0px 30px 70px 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-menu .submenu li {
+  padding: 5px 15px;
+}
+
+.main-menu .submenu li a::before {
+  display: none;
+}
+
+.section__title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.section__title.--center {
+  text-align: center;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 400;
+  color: #6c5ce7;
+  line-height: 28px;
+}
+
+.btn:hover {
+  color: #2980b9;
+}
+
+#header-area {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #dfe6e9;
+  padding: 10px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#header-area.sticky {
+  padding: 10px 0;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;
+}
+
 /*--------------------------------
 05. Utilities style
 --------------------------------*/

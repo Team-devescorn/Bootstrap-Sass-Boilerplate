@@ -1,0 +1,9 @@
+.btn{
+    font-size: 20px;
+    font-weight: 400;
+    color: $titleColor;
+    line-height: 28px;
+    &:hover{
+        color: $themeColor;
+    }
+}

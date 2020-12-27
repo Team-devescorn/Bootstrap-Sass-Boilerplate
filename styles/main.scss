@@ -9,8 +9,8 @@ version: 1.0.0
 CSS table of content
 
     01. Settings style
-    02. Helper style
-    03. Section style
+    02. Base style
+    03. Sections style
     04. Components style
     05. Utilities style
 
@@ -26,22 +26,25 @@ CSS table of content
 @import 'settings/settings.breakpoints';
 
 /*--------------------------------
-02. Helper style
+02. Base style
 --------------------------------*/
 @import 'helper/reset.all'; 
 @import 'helper/helper.theme';
 
 /*--------------------------------
-03. Section style
+03. Sections style
 --------------------------------*/
-//home-one page
-@import 'sections/home-one/homeOne';
+@import 'sections/slider/sections.slider';
+@import 'sections/footer/sections.footer';
 
 //home-one page
-@import 'sections/about-page/aboutPage';
+@import 'sections/home-one/sections.homeOne';
 
 //home-one page
-@import 'sections/blog/blog';
+@import 'sections/about-page/sections.aboutPage';
+
+//home-one page
+@import 'sections/blog/sections.blog';
 
 /*--------------------------------
 04. Components style

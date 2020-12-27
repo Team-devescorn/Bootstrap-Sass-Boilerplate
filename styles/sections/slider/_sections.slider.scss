@@ -1,0 +1,21 @@
+#slider-area{
+    padding: 100px 0 50px 0;
+}
+
+.owl-carousel{
+    .owl-dots{
+        margin-top: 30px;
+        text-align: center;
+        .owl-dot{
+            margin: 0 5px;
+            width: 14px;
+            height: 14px;
+            border: 0;
+            border-radius: 30px;
+            background-color: #fd79a8;
+            &.active{
+                background-color: $titleColor !important;
+            }
+        }
+    }
+}
