@@ -108,6 +108,13 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -118,19 +125,23 @@ img {
   max-width: 100%;
 }
 
+.section__area {
+  padding: 50px 0;
+}
+
 /*--------------------------------
 03. Sections style
 --------------------------------*/
-#slider-area {
+.slider-area {
   padding: 100px 0 50px 0;
 }
 
-.owl-carousel .owl-dots {
+.slider .owl-dots {
   margin-top: 30px;
   text-align: center;
 }
 
-.owl-carousel .owl-dots .owl-dot {
+.slider .owl-dots .owl-dot {
   margin: 0 5px;
   width: 14px;
   height: 14px;
@@ -139,8 +150,53 @@ img {
   background-color: #fd79a8;
 }
 
-.owl-carousel .owl-dots .owl-dot.active {
+.slider .owl-dots .owl-dot.active {
   background-color: #6c5ce7 !important;
+}
+
+.slider__img {
+  position: relative;
+}
+
+.slider__img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #224466;
+  opacity: 0.5;
+}
+
+.slider__content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 50%;
+}
+
+.slider__title {
+  text-transform: capitalize;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+
+.slider__desc {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.slider__buttons {
+  margin-top: 30px;
 }
 
 #footer-bottom {
@@ -159,15 +215,70 @@ img {
   line-height: 28px;
 }
 
+.post {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f8f8e5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.post:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 0px 10px 1px #b4ddca;
+          box-shadow: 0 0px 10px 1px #b4ddca;
+}
+
+.post:hover img {
+  -webkit-transform: scale(1.3) rotate(10deg);
+          transform: scale(1.3) rotate(10deg);
+}
+
+.post__thumb {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.post__thumb img {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.post__content {
+  padding: 10px;
+}
+
+.post__title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #161150;
+  line-height: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.post__title:hover {
+  color: #2980b9;
+}
+
+.post__text {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #161150;
+}
+
+.post__buttons {
+  margin-top: 20px;
+}
+
 /*--------------------------------
 04. Components style
 --------------------------------*/
-.navbar-brand {
-  margin-top: 8px;
-}
-
 .navbar-brand img {
-  width: 135px;
+  width: 100px;
 }
 
 .navbar-toggler {
@@ -260,6 +371,12 @@ img {
 }
 
 .section__title {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto 50px;
+}
+
+.section__title h2 {
   font-size: 32px;
   font-weight: 500;
   line-height: 38px;
@@ -267,35 +384,61 @@ img {
   margin-bottom: 20px;
 }
 
-.section__title.--center {
-  text-align: center;
+.section__title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000;
 }
 
 .btn {
+  padding: 10px 15px;
   font-size: 20px;
   font-weight: 400;
   color: #6c5ce7;
   line-height: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.btn:hover {
-  color: #2980b9;
+.btn.btn-link {
+  background-color: #e658d3;
+  color: #fff;
 }
 
-#header-area {
+.btn.btn-link:hover {
+  background-color: #8a1f7c;
+  color: #fff;
+}
+
+.text-link {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6c5ce7;
+  line-height: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.text-link:hover {
+  letter-spacing: 1px;
+}
+
+.header-area {
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #dfe6e9;
-  padding: 10px 0;
+  background-color: #eff4f7;
+  padding: 15px 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#header-area.sticky {
-  padding: 10px 0;
+.header-area.sticky {
+  padding: 5px 0;
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;

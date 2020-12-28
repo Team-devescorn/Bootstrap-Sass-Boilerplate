@@ -5,9 +5,17 @@ All javascript and jquery plugins activation
     "use strict";
     
     /*---------------------------
+    sticky header
+    ---------------------------*/
+    window.addEventListener("scroll", function(){
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    }); 
+    
+    /*---------------------------
     Smooth scrolling
     ---------------------------*/
-    $("a").on('click', function(event) {
+    $(".nav-link").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             
@@ -20,11 +28,11 @@ All javascript and jquery plugins activation
             });
         }
     });
-
+    
     /*---------------------------
     Slider
     ---------------------------*/
-    $('.owl-carousel').owlCarousel({
+    $('.slider').owlCarousel({
         loop:true,
         margin:10,
         nav:false,
